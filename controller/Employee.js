@@ -4,7 +4,7 @@ var Employee = require('../service/Routes');
 const router = express.Router();
 
 //  #1   http://localhost:3030/employee
-router.get("/employee", (req, res, next) => {
+router.get("/first", (req, res, next) => {
     db.query(Employee.getEmployees(), (err, data)=> {
     if(!err) {   res.status(200).json({
          message:"Employees listed.",
@@ -14,7 +14,7 @@ router.get("/employee", (req, res, next) => {
 });
 
 //  #2  http://localhost:3030/employee/:id
-router.get("/employee/:employeeId", (req, res, next) => {
+router.get("/first/:employeeId", (req, res, next) => {
     let EmployeeX2 = req.params.employeeId;
     db.query(Employee.getEmployee(EmployeeX2), (err, data)=> {
         if(!err) {
@@ -30,7 +30,7 @@ router.get("/employee/:employeeId", (req, res, next) => {
 });
 
 //  #3  http://localhost:3030/employee/delete
-router.post("/employee/delete", (req, res, next) => {
+router.post("/first/delete", (req, res, next) => {
     //var pid = req.body.employeeId;
     //let pid = req.body.employeeId;
     let pid = req.params.employeeId;
