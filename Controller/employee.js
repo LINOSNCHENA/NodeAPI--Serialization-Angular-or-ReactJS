@@ -30,7 +30,7 @@ router.get("/first/:employeeId", (req, res, next) => {
 });
 
 //  #3  http://localhost:1010/first/delete
-router.delete("/first/delete", (req, res, next) => {
+router.delete("/first/delete/:employeeId", (req, res, next) => {
     let pid = req.params.employeeId;
     db.query(Employee.deleteEmployee(pid), (err, data)=> {
         if(!err) {
