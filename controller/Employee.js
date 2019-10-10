@@ -1,6 +1,6 @@
 var express= require('express');
-var db = require('../db/Database');
-var Employee = require('../service/Routes');
+var db = require('../Database/database');
+var Employee = require('../Service/routes');
 const router = express.Router();
 
 //  #1   http://localhost:3030/employee

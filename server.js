@@ -4,8 +4,8 @@ var cors=require('cors');
 var rusanguLtD =require('./Controller/employee');
 var http = require("http");
 
-//Use system configuration for port or use 3030 by default.
-const port = process.env.port || 3030;
+//Use system configuration for port or use 1010 by default.
+const port = process.env.port || 1010;
 const app = express();
 const server = http.createServer(app);
 
