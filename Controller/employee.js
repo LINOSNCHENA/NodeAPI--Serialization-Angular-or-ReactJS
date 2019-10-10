@@ -3,7 +3,7 @@ var db = require('../DataBase/database');
 var Employee = require('../Service/routes');
 const router = express.Router();
 
-//  #1   http://localhost:3030/first
+//  #1   http://localhost:3030/employee
 router.get("/first", (req, res, next) => {
     db.query(Employee.getEmployees(), (err, data)=> {
     if(!err) {   res.status(200).json({
