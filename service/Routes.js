@@ -1,8 +1,8 @@
 class Employee {
     constructor(name,post,dept,status, salary) 
-    {   this.name=name;             this.post=post;
-        this.dept=dept;             this.status=status; 
-        this.salary=salary; }    
+    {   this.name = name;             this.post = post;
+        this.dept = dept;             this.status = status; 
+        this.salary = salary; }    
 
     static getEmployee(id)   {                                                       // GetOne  -1
         let sql = `SELECT * FROM bank1 WHERE id = ${id}`;       
@@ -17,14 +17,9 @@ class Employee {
         return sql;  }
         
     static addEmployee() {                                                            // PostOne -4
-        let sql = `INSERT INTO bank1(id, name, post,dept,status,salary, created_at)         
+        let sql = `INSERT INTO bank1 (name, post,dept,salary, status)         
         VALUES('${this.name}',${this.post}',${this.dept}',${this.salary}',${this.status})`; 
         return sql; }
-        
-    static editEmployee() {                                                        //    PostOne -5****
-            let sql = `INSERT INTO bank1(id, name, post,dept,status,salary, created_at)         
-            VALUES('${this.name}',${this.post}',${this.dept}',${this.salary}',${this.status})`; 
-            return sql; }
 }                                    
                                                                
 module.exports= Employee;
