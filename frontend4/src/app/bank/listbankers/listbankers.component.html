@@ -1,0 +1,62 @@
+<div class="list row">
+    <div class="col-md-8">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Search by title"
+          [(ngModel)]="name1"
+        />
+        <div class="input-group-append">
+          <button
+            class="btn btn-outline-secondary"
+            type="button"
+            (click)="searchName()"
+          >
+            Search
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <h4>Zanaco Bankers List</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let banker of bankers; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setBankerActive(banker, i)"
+        >
+          {{ banker.name1 }}  {{ banker.salary }}
+        </li>
+      </ul>
+  
+      <button class="m-3 btn btn-sm btn-danger" (click)="deleteAllBankers()">
+        Remove All
+      </button>
+    </div>
+    <div class="col-md-6">
+      <div *ngIf="activeBanker">
+        <h4>Active ZANACO Bankers</h4>
+        <div> <label><strong>namel:</strong></label> {{ activeBanker.name1 }} </div>
+        <div> <label><strong>deptl:</strong></label>{{ activeBanker.dept }}</div>
+        <div> <label><strong>postl:</strong></label> {{ activeBanker.post }} </div>
+        <div> <label><strong>salaryl:</strong></label>{{ activeBanker.salary }}</div>
+    
+        <div>
+          <label><strong>Status:</strong></label>
+          {{ activeBanker.published ? "Published" : "Pending" }}
+        </div>
+  
+        <a class="badge badge-warning" routerLink="/banks/{{ activeBanker.id }}">
+          Edit
+        </a>
+      </div>
+  
+      <div *ngIf="!activeBanker">
+        <br />
+        <p>Please click on a Bankers name...</p>
+      </div>
+    </div>
+  </div>
+  

@@ -23,6 +23,7 @@ npm install
 npm update
 npm start
 nodemon start
+npm install express sequelize mysql2 body-parser cors --save
 
 ```
 
@@ -34,7 +35,7 @@ nodemon start
 ## Interface U-Xperience
  Below are some Screens shots from the application in development
 
-![ AppMuntu #2 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page1.png)
+![ AppMuntu #1 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page1.png)
 ![ AppMuntu #2 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page2.png)
-![ AppMuntu #2 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page2.png)
-![ AppMuntu #2 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page1.png)
+![ AppMuntu #3 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page3.png)
+![ AppMuntu #4 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page4.png)

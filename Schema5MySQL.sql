@@ -1,3 +1,5 @@
+drop database presly;
+create database presly;
 
 use presly;
 DROP TABLE IF EXISTS bank1;
