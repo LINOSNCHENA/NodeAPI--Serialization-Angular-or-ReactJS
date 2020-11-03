@@ -1,7 +1,7 @@
 class Employee {
-    constructor(name, post, dept, status, salary) {
-        this.name = name; this.post = post;
-        this.dept = dept; this.status = status;
+    constructor(name1, post, dept, published, salary) {
+        this.name1 = name1; this.post = post;
+        this.dept = dept; this.published = published;
         this.salary = salary;
     }
 
@@ -21,8 +21,8 @@ class Employee {
     }
 
     static addEmployee() {                                                            // PostOne -4
-        let sql = `INSERT INTO bank1 (name, post,dept,salary, status)         
-        VALUES('${this.name}',${this.post}',${this.dept}',${this.salary}',${this.status})`;
+        let sql = `INSERT INTO bank1 (name1, post,dept,salary)         
+        VALUES('${this.name1}',${this.post}',${this.dept}',${this.salary}')`;
         return sql;
     }
 }

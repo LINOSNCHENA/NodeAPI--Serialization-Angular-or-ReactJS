@@ -6,22 +6,22 @@ DROP TABLE IF EXISTS bank1;
 CREATE TABLE bank1
 (
     id SERIAL PRIMARY KEY,
-    name VARCHAR(50) NOT NULL,
+    name1 VARCHAR(50) NOT NULL,
     dept VARCHAR(50) NOT NULL,
     post VARCHAR(50)NOT NULL,
     salary int NOT NULL,
-    status VARCHAR(50) DEFAULT "*five",
+    published boolean DEFAULT "1",
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 INSERT INTO bank1
-    ( name, dept, post, salary )
+    ( name1, dept, post, salary )
 VALUES
-    ("Mavin", "Enginering", "Backend5", 21200 ),
-    ( "Lorena", "Admin", "Administrator", 18500 ),
-    ("Nikolas", "Engineering", "Manager", 18500 ),
-    ( "Wendy", "PoliceWoman", "CEO", 32500 ),
-    ("Louis", "Enginering", "Backend5", 21200 );
+    ("Mavin1x", "Enginering", "Backend5", 21200 ),
+    ( "Lorena1x", "Admin", "Administrator", 18500 ),
+    ("Nikolas1x", "Engineering", "Manager", 18500 ),
+    ( "Wendy1x", "PoliceWoman", "CEO", 32500 ),
+    ("Louis1x", "Enginering", "Backend5", 21200 );
 
 select*
 from bank1

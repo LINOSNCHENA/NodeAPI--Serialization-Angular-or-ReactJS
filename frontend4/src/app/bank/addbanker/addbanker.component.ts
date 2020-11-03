@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Banker } from 'src/app/services/banker';
 import { BankersService } from 'src/app/services/bankers.service';
 
 @Component({
@@ -15,6 +16,8 @@ export class AddbankerComponent implements OnInit {
 
     published: false
   };
+
+  //banker:  Banker;
   submitted = false;
 
   constructor(private bnkService: BankersService) { }

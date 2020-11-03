@@ -6,8 +6,8 @@ const router = express.Router();
 
 //  #4  http://localhost:1010/employees/add
 router.post("/employees/", (req, res, next) => {
-    let data = new Employee(req.body.name, req.body.post,
-        req.body.dept,req.body.salary,req.body.status);     
+    let data = new Employee(req.body.name1, req.body.post,
+        req.body.dept,req.body.salary);//,req.body.status);     
     db.query(Employee.addEmployee(), (err, data)=> {
         res.status(200).json({ 
              message:"Worker added.", 
