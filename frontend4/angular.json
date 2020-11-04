@@ -23,14 +23,13 @@
               "src/favicon.ico",
               "src/assets"
             ],
-
             "styles": [
-                       "src/styles.css"
+              "src/styles.css"
             ],
             "scripts": [
-                "node_modules/jquery/dist/jquery.min.js"
-               ]
-             },
+              "node_modules/jquery/dist/jquery.min.js"
+            ]
+          },
           "configurations": {
             "production": {
               "fileReplacements": [
@@ -122,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "frontend4"
+    }
+  },
+  "defaultProject": "frontend4",
+  "cli": {
+    "analytics": false
+  }
 }

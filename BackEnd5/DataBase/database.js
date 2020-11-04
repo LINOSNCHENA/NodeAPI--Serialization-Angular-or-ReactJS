@@ -24,9 +24,7 @@ function executeQuery(sql, callback) {
 }
 function query(sql, callback) {
     executeQuery(sql, function (err, data) {
-        if (err) {
-            return callback(err);
-        }
+        if (err) {  return callback(err);  }
         callback(null, data);
     });
 }

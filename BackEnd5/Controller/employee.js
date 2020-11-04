@@ -4,7 +4,7 @@ var Employee = require('../Service/routes');
 const router = express.Router();
 
 
-//  #4  http://localhost:1010/employees/add
+//  #1  http://localhost:1010/employees/add
 router.post("/employees/", (req, res, next) => {
     let data = new Employee(req.body.name1, req.body.post,
         req.body.dept,req.body.salary);//,req.body.status);     
@@ -16,7 +16,7 @@ router.post("/employees/", (req, res, next) => {
     });
 });  
 
-//  #1   http://localhost:1010/employee
+//  #2A   http://localhost:1010/employee
 router.get("/employees", (req, res, next) => {
     db.query(Employee.getEmployees(), (err, data)=> {
     if(!err) {   res.status(200).json({
@@ -26,7 +26,7 @@ router.get("/employees", (req, res, next) => {
     });    
 });
 
-//  #2  http://localhost:1010/employees/:id
+//  #2B  http://localhost:1010/employees/:id
 router.get("/employees/:employeeId", (req, res, next) => {
     let EmployeeX2 = req.params.employeeId;
     db.query(Employee.getEmployee(EmployeeX2), (err, data)=> {
