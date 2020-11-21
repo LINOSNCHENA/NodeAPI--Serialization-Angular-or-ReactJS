@@ -10,7 +10,8 @@ The developmental stack of the application consist of;
 1. FrontEnd  (Angular+9)
 2. Server    (ExpresJS)
 3. JavaScript(NodeJS)
-4. Database  (MySQL)
+4. Database  (MySQL,MSSQL)
+5. FrontEnd  (React +4)
 
 ## Execution commands
 
