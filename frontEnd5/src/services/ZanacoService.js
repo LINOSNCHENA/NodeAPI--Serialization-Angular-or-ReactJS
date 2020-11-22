@@ -24,8 +24,8 @@ const removeAll = () => {
   return http.delete(`/employees`);
 };
 
-const findByTitle = name1 => {
+const seachByName = name1 => {
   return http.get(`/employees?name1=${name1}`);
 };
 
-export default { getAll, get, create, update, remove, removeAll, findByTitle };
+export default { getAll, get, create, update, remove, removeAll, seachByName };

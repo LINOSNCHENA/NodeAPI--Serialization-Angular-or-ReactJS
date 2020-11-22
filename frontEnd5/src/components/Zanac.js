@@ -1,19 +1,19 @@
 import React, { useState, useEffect } from "react";
-import TutorialDataService from "../services/TutorialService";
+import ZanacDataService from "../services/ZanacoService";
 
-const Tutorial = props => {
-  const initialTutorialState = {
+const Zanac = props => {
+  const initialZanacotate = {
     id: null,
     name1: "",    dept: "",    post: "",    salary: "",
     published: false
   };
-  const [currentTutorial, setCurrentTutorial] = useState(initialTutorialState);
+  const [currentZanac, setCurrentZanac] = useState(initialZanacotate);
   const [message, setMessage] = useState("");
 
-  const getTutorial = id => {
-    TutorialDataService.get(id)
+  const getZanac = id => {
+    ZanacDataService.get(id)
       .then(response => {
-        setCurrentTutorial(response.data);
+        setCurrentZanac(response.data);
         console.log(response.data);
       })
       .catch(e => {
@@ -22,27 +22,27 @@ const Tutorial = props => {
   };
 
   useEffect(() => {
-    getTutorial(props.match.params.id);
+    getZanac(props.match.params.id);
   }, [props.match.params.id]);
 
   const handleInputChange = event => {
     const { name, value } = event.target;
-    setCurrentTutorial({ ...currentTutorial, [name]: value });
+    setCurrentZanac({ ...currentZanac, [name]: value });
   };
 
   const updatePublished = status => {
     var data = {
-      id: currentTutorial.id,
-      name1: currentTutorial.name1,
-      dept: currentTutorial.dept,
-      post: currentTutorial.post,
-      salary: currentTutorial.salary,
+      id: currentZanac.id,
+      name1: currentZanac.name1,
+      dept: currentZanac.dept,
+      post: currentZanac.post,
+      salary: currentZanac.salary,
       published: status
     };
 
-    TutorialDataService.update(currentTutorial.id, data)
+    ZanacDataService.update(currentZanac.id, data)
       .then(response => {
-        setCurrentTutorial({ ...currentTutorial, published: status });
+        setCurrentZanac({ ...currentZanac, published: status });
         console.log(response.data);
       })
       .catch(e => {
@@ -50,19 +50,19 @@ const Tutorial = props => {
       });
   };
 
-  const updateTutorial = () => {
-    TutorialDataService.update(currentTutorial.id, currentTutorial)
+  const updateZanac = () => {
+    ZanacDataService.update(currentZanac.id, currentZanac)
       .then(response => {
         console.log(response.data);
-        setMessage("The tutorial was updated successfully!");
+        setMessage("The Zanac was updated successfully!");
       })
       .catch(e => {
         console.log(e);
       });
   };
 
-  const deleteTutorial = () => {
-    TutorialDataService.remove(currentTutorial.id)
+  const deleteZanac = () => {
+    ZanacDataService.remove(currentZanac.id)
       .then(response => {
         console.log(response.data);
         props.history.push("/employees"); 
@@ -74,7 +74,7 @@ const Tutorial = props => {
 
   return (
     <div>
-      {currentTutorial ? (
+      {currentZanac ? (
         <div className="edit-form">
           <h4> Banker</h4>
           <form>
@@ -85,7 +85,7 @@ const Tutorial = props => {
                 className="form-control"
                 id="name1"
                 name="name1"
-                value={currentTutorial.name1}
+                value={currentZanac.name1}
                 onChange={handleInputChange}
               />
             </div>
@@ -94,7 +94,7 @@ const Tutorial = props => {
               <input
                 type="text"                className="form-control"
                 id="dept"                name="dept"
-                value={currentTutorial.dept}
+                value={currentZanac.dept}
                 onChange={handleInputChange}
               />
             </div>
@@ -103,7 +103,7 @@ const Tutorial = props => {
               <input
                 type="text"                className="form-control"
                 id="post"                name="post"
-                value={currentTutorial.post}
+                value={currentZanac.post}
                 onChange={handleInputChange}
               />
             </div>
@@ -112,7 +112,7 @@ const Tutorial = props => {
               <input
                 type="text"                className="form-control"
                 id="salary"                name="salary"
-                value={currentTutorial.salary}
+                value={currentZanac.salary}
                 onChange={handleInputChange}
               />
             </div>
@@ -121,11 +121,11 @@ const Tutorial = props => {
               <label>
                 <strong>Status:</strong>
               </label>
-              {currentTutorial.published ? "Published" : "Pending"}
+              {currentZanac.published ? "Published" : "Pending"}
             </div>
           </form>
 
-          {currentTutorial.published ? (
+          {currentZanac.published ? (
             <button
               className="badge badge-primary mr-2"
               onClick={() => updatePublished(false)}
@@ -141,14 +141,14 @@ const Tutorial = props => {
             </button>
           )}
 
-          <button className="badge badge-danger mr-2" onClick={deleteTutorial}>
+          <button className="badge badge-danger mr-2" onClick={deleteZanac}>
             Delete
           </button>
 
           <button
             type="submit"
             className="badge badge-success"
-            onClick={updateTutorial}
+            onClick={updateZanac}
           >
             Update
           </button>
@@ -164,4 +164,4 @@ const Tutorial = props => {
   );
 };
 
-export default Tutorial;
+export default Zanac;

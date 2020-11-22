@@ -3,9 +3,9 @@ import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import AddTutorial from "./components/AddTutorial";
-import Tutorial from "./components/Tutorial";
-import TutorialsList from "./components/TutorialsList";
+import AddZanac from "./components/AddZanac";
+import Zanac from "./components/Zanac";
+import ZanacoList from "./components/ZanacoList";
 
 function App() {
   return (
@@ -31,9 +31,9 @@ function App() {
 
       <div className="container mt-3">
         <Switch>
-          <Route exact path={["/", "/employees"]} component={TutorialsList} />
-          <Route exact path="/add" component={AddTutorial} />
-          <Route path="/employees/:id" component={Tutorial} />
+          <Route exact path={["/", "/employees"]} component={ZanacoList} />
+          <Route exact path="/add" component={AddZanac} />
+          <Route path="/employees/:id" component={Zanac} />
         </Switch>
       </div>
     </div>

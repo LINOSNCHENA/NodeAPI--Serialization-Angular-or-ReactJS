@@ -1,32 +1,32 @@
 import React, { useState } from "react";
-import TutorialDataService from "../services/TutorialService";
+import ZanacDataService from "../services/ZanacoService";
 
-const AddTutorial = () => {
-  const initialTutorialState = {
+const AddZanac = () => {
+  const initialZanacotate = {
     id: null,    name1: "",    dept: "",
     post: "", salary: "",
     published: false
   };
   
-  const [tutorial, setTutorial] = useState(initialTutorialState);
+  const [Zanac, setZanac] = useState(initialZanacotate);
   const [submitted, setSubmitted] = useState(false);
 
   const handleInputChange = event => {
     const { name, value } = event.target;
-    setTutorial({ ...tutorial, [name]: value });
+    setZanac({ ...Zanac, [name]: value });
   };
 
-  const saveTutorial = () => {
+  const saveZanac = () => {
     var data = {
-      name1: tutorial.name1,
-      dept: tutorial.dept,
-      post: tutorial.post,
-      salary: tutorial.salary
+      name1: Zanac.name1,
+      dept: Zanac.dept,
+      post: Zanac.post,
+      salary: Zanac.salary
     };
 
-    TutorialDataService.create(data)
+    ZanacDataService.create(data)
       .then(response => {
-        setTutorial({
+        setZanac({
           id: response.data.id,
           name1: response.data.name1,
           dept: response.data.dept,
@@ -42,8 +42,8 @@ const AddTutorial = () => {
       });
   };
 
-  const newTutorial = () => {
-    setTutorial(initialTutorialState);
+  const newZanac = () => {
+    setZanac(initialZanacotate);
     setSubmitted(false);
   };
 
@@ -52,7 +52,7 @@ const AddTutorial = () => {
       {submitted ? (
         <div>
           <h4>You submitted successfully!</h4>
-          <button className="btn btn-success" onClick={newTutorial}>
+          <button className="btn btn-success" onClick={newZanac}>
             Add
           </button>
         </div>
@@ -60,28 +60,28 @@ const AddTutorial = () => {
           <div>
             <div className="form-group"> <label htmlFor="name1">Name1</label>
               <input type="text" className="form-control" id="name1"
-                required value={tutorial.name1}
+                required value={Zanac.name1}
                 onChange={handleInputChange} name="name1" />
             </div>
 
             <div className="form-group"><label htmlFor="dept">Dept</label>       
               <input  type="text" className="form-control" id="dept" required
-                value={tutorial.dept} onChange={handleInputChange} name="dept" />
+                value={Zanac.dept} onChange={handleInputChange} name="dept" />
             </div>
 
             <div className="form-group"><label htmlFor="post">Post</label>            
               <input  type="text" className="form-control" id="post" required
-                value={tutorial.post} onChange={handleInputChange} name="post" />
+                value={Zanac.post} onChange={handleInputChange} name="post" />
             </div>
 
 
             <div className="form-group"><label htmlFor="salary">salary</label>
             <input type="text" className="form-control" id="salary" required
-                value={tutorial.salary} onChange={handleInputChange} name="salary" />
+                value={Zanac.salary} onChange={handleInputChange} name="salary" />
             </div>
 
 
-            <button onClick={saveTutorial} className="btn btn-success">
+            <button onClick={saveZanac} className="btn btn-success">
               Submit
           </button>
           </div>
@@ -90,4 +90,4 @@ const AddTutorial = () => {
   );
 };
 
-export default AddTutorial;
+export default AddZanac;

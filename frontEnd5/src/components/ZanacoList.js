@@ -1,26 +1,26 @@
 import React, { useState, useEffect } from "react";
-import TutorialDataService from "../services/TutorialService";
+import ZanacDataService from "../services/ZanacoService";
 import { Link } from "react-router-dom";
 
-const TutorialsList = () => {
-  const [tutorials, setTutorials] = useState([]);
-  const [currentTutorial, setCurrentTutorial] = useState(null);
+const ZanacoList = () => {
+  const [Zanaco, setZanaco] = useState([]);
+  const [currentZanac, setCurrentZanac] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
-  const [searchTitle, setSearchTitle] = useState("");
+  const [searchName, setsearchName] = useState("");
 
   useEffect(() => {
-    retrieveTutorials();
+    retrieveZanaco();
   }, []);
 
-  const onChangeSearchTitle = e => {
-    const searchTitle = e.target.value;
-    setSearchTitle(searchTitle);
+  const onChangesearchName = e => {
+    const searchName = e.target.value;
+    setsearchName(searchName);
   };
 
-  const retrieveTutorials = () => {
-    TutorialDataService.getAll()
+  const retrieveZanaco = () => {
+    ZanacDataService.getAll()
       .then(response => {
-        setTutorials(response.data);
+        setZanaco(response.data);
         console.log(response.data);
       })
       .catch(e => {
@@ -29,18 +29,18 @@ const TutorialsList = () => {
   };
 
   const refreshList = () => {
-    retrieveTutorials();
-    setCurrentTutorial(null);
+    retrieveZanaco();
+    setCurrentZanac(null);
     setCurrentIndex(-1);
   };
 
-  const setActiveTutorial = (tutorial, index) => {
-    setCurrentTutorial(tutorial);
+  const setActiveZanac = (Zanac, index) => {
+    setCurrentZanac(Zanac);
     setCurrentIndex(index);
   };
 
-  const removeAllTutorials = () => {
-    TutorialDataService.removeAll()
+  const removeAllZanaco = () => {
+    ZanacDataService.removeAll()
       .then(response => {
         console.log(response.data);
         refreshList();
@@ -50,10 +50,10 @@ const TutorialsList = () => {
       });
   };
 /////////////////////////////////////////////////////////////////////
-  const findByTitle = () => {
-    TutorialDataService.findByTitle(searchTitle)
+  const seachByName = () => {
+    ZanacDataService.seachByName(searchName)
       .then(response => {
-        setTutorials(response.data);
+        setZanaco(response.data);
         console.log(response.data);
       })
       .catch(e => {
@@ -69,14 +69,14 @@ const TutorialsList = () => {
             type="text"
             className="form-control"
             placeholder="Search by name1"
-            value={searchTitle}
-            onChange={onChangeSearchTitle}
+            value={searchName}
+            onChange={onChangesearchName}
           />
           <div className="input-group-append">
             <button
               className="btn btn-outline-secondary"
               type="button"
-              onClick={findByTitle}
+              onClick={seachByName}
             >
               Search
             </button>
@@ -84,51 +84,51 @@ const TutorialsList = () => {
         </div>
       </div>
       <div className="col-md-6">
-        <h4>Tutorials List</h4>
+        <h4>Zanaco List</h4>
 
         <ul className="list-group">
-          {tutorials &&
-            tutorials.map((tutorial, index) => (
+          {Zanaco &&
+            Zanaco.map((Zanac, index) => (
               <li
                 className={
                   "list-group-item " + (index === currentIndex ? "active" : "")
                 }
-                onClick={() => setActiveTutorial(tutorial, index)}
+                onClick={() => setActiveZanac(Zanac, index)}
                 key={index}
               >
-                {tutorial.name1}
+                {Zanac.name1}
               </li>
             ))}
         </ul>
 
         <button
           className="m-3 btn btn-sm btn-danger"
-          onClick={removeAllTutorials}
+          onClick={removeAllZanaco}
         >
           Remove All
         </button>
       </div>
       <div className="col-md-6">
-        {currentTutorial ? (
+        {currentZanac ? (
           <div>
             <h4>List of Bankers</h4>
             <div> <label> <strong>Name:</strong>
-              </label>{" "} {currentTutorial.name1} </div>
+              </label>{" "} {currentZanac.name1} </div>
             <div> <label> <strong>Department:</strong>
-              </label>{" "}{currentTutorial.dept} </div>
+              </label>{" "}{currentZanac.dept} </div>
 
               <div> <label> <strong>Post:</strong>
-              </label>{" "} {currentTutorial.post} </div>
+              </label>{" "} {currentZanac.post} </div>
             <div> <label> <strong>Salary:</strong>
-              </label>{" "}{currentTutorial.salary} </div>
+              </label>{" "}{currentZanac.salary} </div>
 
 
             <div> <label>  <strong>Status:</strong> </label>{" "}
-              {currentTutorial.published ? "Published" : "Pending"}
+              {currentZanac.published ? "Published" : "Pending"}
             </div>
 
             <Link
-              to={"/employees/" + currentTutorial.id}
+              to={"/employees/" + currentZanac.id}
                className="badge badge-warning"
             >
               Edit
@@ -137,7 +137,7 @@ const TutorialsList = () => {
         ) : (
           <div>
             <br />
-            <p>Please click on a Tutorial...</p>
+            <p>Please click on a Zanac...</p>
           </div>
         )}
       </div>
@@ -147,4 +147,4 @@ const TutorialsList = () => {
 
 };
 
-export default TutorialsList;
+export default ZanacoList;
