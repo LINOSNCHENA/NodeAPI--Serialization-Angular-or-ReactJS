@@ -96,7 +96,7 @@ const ZanacoList = () => {
                 onClick={() => setActiveZanac(Zanac, index)}
                 key={index}
               >
-                {Zanac.name1}
+                {Zanac.name1}  {'! - !'}     {Zanac.dept}  {'! - !'}     {Zanac.post}
               </li>
             ))}
         </ul>
