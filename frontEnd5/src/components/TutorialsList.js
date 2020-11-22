@@ -111,21 +111,19 @@ const TutorialsList = () => {
       <div className="col-md-6">
         {currentTutorial ? (
           <div>
-            <h4>Tutorial</h4>
-            <div>
-              <label>
-                <strong>Title:</strong>
-              </label>{" "}
-              {currentTutorial.name1}
-            </div>
-            <div>
-              <label>
-                <strong>Description:</strong>
-              </label>{" "}
-              {currentTutorial.dept}
-            </div>
-            <div>
-              <label>
+            <h4>List of Bankers</h4>
+            <div> <label> <strong>Name:</strong>
+              </label>{" "} {currentTutorial.name1} </div>
+            <div> <label> <strong>Deptscription:</strong>
+              </label>{" "}{currentTutorial.dept} </div>
+
+              <div> <label> <strong>Post:</strong>
+              </label>{" "} {currentTutorial.post} </div>
+            <div> <label> <strong>Salary:</strong>
+              </label>{" "}{currentTutorial.salary} </div>
+
+
+            <div> <label>
                 <strong>Status:</strong>
               </label>{" "}
               {currentTutorial.published ? "Published" : "Pending"}
@@ -133,8 +131,7 @@ const TutorialsList = () => {
 
             <Link
               to={"/employees/" + currentTutorial.id}
-              //  to={"/tutorials/" + currentTutorial.id}
-              className="badge badge-warning"
+               className="badge badge-warning"
             >
               Edit
             </Link>

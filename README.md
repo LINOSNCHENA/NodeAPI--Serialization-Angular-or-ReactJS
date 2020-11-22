@@ -10,7 +10,8 @@ The developmental stack of the application consist of;
 1. FrontEnd  (Angular+9)
 2. Server    (ExpresJS)
 3. JavaScript(NodeJS)
-4. Database  (MySQL,MSSQL)
+4. Backend5  (MySQL,*****) Manual Format
+4. Backedn6  (MySQL,MSSQL) Automatic Format
 5. FrontEnd  (React +4)
 
 ## Execution commands
@@ -25,7 +26,7 @@ npm install express sequelize  --save
 npm install mysql2 body-parser cors --save
 npm START
 
-cd FrontEnd 4
+cd FrontEnd 4/9
 --------------------------------------------------------------
 npm install bootstrap --save
 npm START
@@ -38,11 +39,12 @@ npm START
 - Open [http://localhost:8080/](http://localhost:8080/employees) in browser to see the backend of the application.
 
 ## Interface U-Xperience
+
  Below are some screens shots from the application console
 
-![ AppMuntu #1 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page1.png)
-![ AppMuntu #2 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page2.png)
-![ AppMuntu #3 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page3.png)
-![ AppMuntu #4 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page4.png)
-![ AppMuntu #5 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page5.png)
-![ AppMuntu #6 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page6.png)
+![Mut#1 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page1.png)
+![Mut#2 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page2.png)
+![Mut#3 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page3.png)
+![Mut#4 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page4.png)
+![Mut#5 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page5.png)
+![Mut#6 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page6.png)

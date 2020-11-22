@@ -18,9 +18,9 @@ INSERT INTO bank1
     ( name1, dept, post, salary )
 VALUES
     ("Mavin1x", "Enginering", "Backend5", 21200 ),
-    ( "Lorena1x", "Admin", "Administrator", 18500 ),
+    ( "Lorena1x", "MySQL-ReactJS", "Administrator", 18500 ),
     ("Nikolas1x", "Engineering", "Manager", 18500 ),
-    ( "Wendy1x", "PoliceWoman", "CEO", 32500 ),
+    ( "Wendy1x", "MySQL-Angular", "CEO", 32500 ),
     ("Louis1x", "Enginering", "Backend5", 21200 );
 
 select*
