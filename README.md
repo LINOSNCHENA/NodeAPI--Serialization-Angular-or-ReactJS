@@ -32,7 +32,7 @@ npm install bootstrap --save
 npm START
 
 ```
-
+Diferences: In Backend6(name1) UpdateAt and published are present while missing in BackEnd5(name)
 ## Links for the frontend endpoints and backend endpoints
 
 - Open [http://localhost:4200/](http://localhost:4200/employees) in browser to see the frontend of the application.
@@ -42,9 +42,10 @@ npm START
 
  Below are some screens shots from the application console
 
-![Mut#1 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page1.png)
-![Mut#2 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page2.png)
-![Mut#3 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page3.png)
-![Mut#4 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page4.png)
-![Mut#5 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page5.png)
-![Mut#6 ](https://github.com/LINOSNCHENA/NodeAPI-Without-Model-Mysql-implementaion-FS4/blob/master/uxViews/page6.png)
+![Mut#1 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/main/uxViews/page1.png)
+![Mut#2 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/main/uxViews/page2.png)
+![Mut#3 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/main/uxViews/page3.png)
+![Mut#4 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/main/uxViews/page4.png)
+![Mut#5 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/main/uxViews/page5.png)
+![Mut#6 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/main/uxViews/page6.png)
+
