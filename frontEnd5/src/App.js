@@ -3,8 +3,8 @@ import { Switch, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./App.css";
 
-import AddZanac from "./components/AddZanac";
-import Zanac from "./components/Zanac";
+import AddZanac from "./components/AddZanaco";
+import Zanac from "./components/Zanaco";
 import ZanacoList from "./components/ZanacoList";
 
 function App() {
