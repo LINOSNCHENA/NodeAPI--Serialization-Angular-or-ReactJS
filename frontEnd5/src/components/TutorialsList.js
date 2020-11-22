@@ -114,7 +114,7 @@ const TutorialsList = () => {
             <h4>List of Bankers</h4>
             <div> <label> <strong>Name:</strong>
               </label>{" "} {currentTutorial.name1} </div>
-            <div> <label> <strong>Deptscription:</strong>
+            <div> <label> <strong>Department:</strong>
               </label>{" "}{currentTutorial.dept} </div>
 
               <div> <label> <strong>Post:</strong>
@@ -123,9 +123,7 @@ const TutorialsList = () => {
               </label>{" "}{currentTutorial.salary} </div>
 
 
-            <div> <label>
-                <strong>Status:</strong>
-              </label>{" "}
+            <div> <label>  <strong>Status:</strong> </label>{" "}
               {currentTutorial.published ? "Published" : "Pending"}
             </div>
 
@@ -145,6 +143,8 @@ const TutorialsList = () => {
       </div>
     </div>
   );
+/////////////////////////////////////////////////////////////////////////////////
+
 };
 
 export default TutorialsList;

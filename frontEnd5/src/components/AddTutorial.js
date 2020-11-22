@@ -3,12 +3,11 @@ import TutorialDataService from "../services/TutorialService";
 
 const AddTutorial = () => {
   const initialTutorialState = {
-    id: null,
-    name1: "",
-    dept: "",
-    post: "", salary: "",//////
+    id: null,    name1: "",    dept: "",
+    post: "", salary: "",
     published: false
   };
+  
   const [tutorial, setTutorial] = useState(initialTutorialState);
   const [submitted, setSubmitted] = useState(false);
 
@@ -20,7 +19,9 @@ const AddTutorial = () => {
   const saveTutorial = () => {
     var data = {
       name1: tutorial.name1,
-      dept: tutorial.dept
+      dept: tutorial.dept,
+      post: tutorial.post,
+      salary: tutorial.salary
     };
 
     TutorialDataService.create(data)
@@ -29,6 +30,8 @@ const AddTutorial = () => {
           id: response.data.id,
           name1: response.data.name1,
           dept: response.data.dept,
+          post: response.data.post,
+          salary: response.data.salary,
           published: response.data.published
         });
         setSubmitted(true);
@@ -54,38 +57,35 @@ const AddTutorial = () => {
           </button>
         </div>
       ) : (
-        <div>
-          <div className="form-group">
-            <label htmlFor="name1">Title</label>
-            <input
-              type="text"
-              className="form-control"
-              id="name1"
-              required
-              value={tutorial.name1}
-              onChange={handleInputChange}
-              name="name1"
-            />
-          </div>
+          <div>
+            <div className="form-group"> <label htmlFor="name1">Name1</label>
+              <input type="text" className="form-control" id="name1"
+                required value={tutorial.name1}
+                onChange={handleInputChange} name="name1" />
+            </div>
 
-          <div className="form-group">
-            <label htmlFor="dept">Description</label>
-            <input
-              type="text"
-              className="form-control"
-              id="dept"
-              required
-              value={tutorial.dept}
-              onChange={handleInputChange}
-              name="dept"
-            />
-          </div>
+            <div className="form-group"><label htmlFor="dept">Dept</label>       
+              <input  type="text" className="form-control" id="dept" required
+                value={tutorial.dept} onChange={handleInputChange} name="dept" />
+            </div>
 
-          <button onClick={saveTutorial} className="btn btn-success">
-            Submit
+            <div className="form-group"><label htmlFor="post">Post</label>            
+              <input  type="text" className="form-control" id="post" required
+                value={tutorial.post} onChange={handleInputChange} name="post" />
+            </div>
+
+
+            <div className="form-group"><label htmlFor="salary">salary</label>
+            <input type="text" className="form-control" id="salary" required
+                value={tutorial.salary} onChange={handleInputChange} name="salary" />
+            </div>
+
+
+            <button onClick={saveTutorial} className="btn btn-success">
+              Submit
           </button>
-        </div>
-      )}
+          </div>
+        )}
     </div>
   );
 };
