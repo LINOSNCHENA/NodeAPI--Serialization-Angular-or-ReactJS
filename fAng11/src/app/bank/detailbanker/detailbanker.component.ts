@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BankersService } from 'src/app/services/bankers.service';
+import { Banker } from 'src/app/services/banker';
 
 @Component({
   selector: 'app-detailbanker',
@@ -8,19 +9,17 @@ import { BankersService } from 'src/app/services/bankers.service';
   styleUrls: ['./detailbanker.component.css']
 })
 export class DetailbankerComponent implements OnInit {
-  activeBanker!: any;
+  activeBanker!: Banker;
   message = '';
 
   constructor(
     private bnkService: BankersService,
-   // private route: any,
-    private router: Router) { }
-    private route: ActivatedRoute = new ActivatedRoute;
-   // private router: Router) { }
+    private router: Router,
+    private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.message = '';
-  //  this.getBanker(this.route.snapshot.paramMap.get('id'));
+    this.getBanker(this.route.snapshot.params.id);
   }
 
   getBanker(id: string): void {

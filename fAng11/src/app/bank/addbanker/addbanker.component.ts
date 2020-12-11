@@ -8,30 +8,28 @@ import { BankersService } from 'src/app/services/bankers.service';
   styleUrls: ['./addbanker.component.css']
 })
 export class AddbankerComponent implements OnInit {
+
   banker = {
     name1: '',
     dept: '',
     post: '',
     salary: '',
-
     published: false
   };
 
-  //banker:  Banker;
+  banker2!: Banker;
   submitted = false;
 
   constructor(private bnkService: BankersService) { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void { }
 
   saveBanker(): void {
     const data = {
       name1: this.banker.name1,
       dept: this.banker.dept,
       post: this.banker.post,
-      salary: this.banker.salary,
-
+      salary: this.banker.salary
     };
 
     this.bnkService.create(data)
@@ -55,5 +53,4 @@ export class AddbankerComponent implements OnInit {
       published: false
     };
   }
-
 }

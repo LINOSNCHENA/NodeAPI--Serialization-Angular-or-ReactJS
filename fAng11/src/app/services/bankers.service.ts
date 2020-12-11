@@ -8,6 +8,7 @@ const baseUrl = 'http://localhost:8080/employees';
   providedIn: 'root'
 })
 export class BankersService {
+
   constructor(private http: HttpClient) { }
   getAll(): Observable<any> {
     return this.http.get(baseUrl);
@@ -17,13 +18,16 @@ export class BankersService {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  create(data: { name1: string; dept: string; post: string; 
-    salary: string; }): Observable<any> {
+  create(data: {
+    name1: string; dept: string; post: string;
+    salary: string;
+  }): Observable<any> {
     return this.http.post(baseUrl, data);
   }
 
-  update(id: any, data: { name1: any; dept: any; published: any; }): 
-  Observable<any> { return this.http.put(`${baseUrl}/${id}`, data);
+  update(id: any, data: { name1: any; dept: any; published: any; }):
+    Observable<any> {
+      return this.http.put(`${baseUrl}/${id}`, data);
   }
 
   delete(id: any): Observable<any> {

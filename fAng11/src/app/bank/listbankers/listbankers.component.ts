@@ -10,11 +10,10 @@ import { BankersService } from 'src/app/services/bankers.service';
 })
 export class ListbankersComponent implements OnInit {
 
-  bankers: any;
-  activeBanker = null;
+  bankers?: Banker[];
+  activeBanker?: Banker;
   currentIndex = -1;
   name1 = '';
-  bankers1!: [string, unknown][];
 
   constructor(private bnkService: BankersService,
     private _router: Router,) { }
@@ -27,12 +26,7 @@ export class ListbankersComponent implements OnInit {
     this.bnkService.getAll()
       .subscribe(
         data => {
-          this.bankers = data;
-          console.log("DATA xxxxIA /n" + data);
-          console.log(data);
-          var res = Object.entries(data);
-          this.bankers1 = res;
-          console.log(res)
+          this.bankers = data; 
         },
         error => {
           console.log(error);
@@ -41,7 +35,7 @@ export class ListbankersComponent implements OnInit {
 
   refreshList(): void {
     this.bankersUpdated();
-    this.activeBanker = null;
+    this.activeBanker = undefined;
     this.currentIndex = -1;
   }
 
@@ -55,8 +49,7 @@ export class ListbankersComponent implements OnInit {
       .subscribe(
         response => {
           console.log(response);
-          this.refreshList();
-        },
+          this.refreshList();},
         error => {
           console.log(error);
         });
@@ -74,10 +67,9 @@ export class ListbankersComponent implements OnInit {
         });
   }
 
-  // add worker
+  // edit worker
   editBanker(worker: Banker) {
     var id = worker.id;
-    console.log(worker);
     console.log("\n======================================\n");
     console.log(id);
     console.log(worker);
@@ -86,12 +78,7 @@ export class ListbankersComponent implements OnInit {
 
    // add worker
    addBanker() {
-    // var id = worker.id;
-    // console.log(worker);
     console.log("\n======================================\n");
-    // console.log(id);
-    // console.log(worker);
     this._router.navigate(['/addbanker/']);
   }
-
 }

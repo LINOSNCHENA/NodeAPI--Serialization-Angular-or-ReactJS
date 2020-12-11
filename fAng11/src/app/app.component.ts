@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'frontend4';
+  title = 'frontEnd-11-Angular';
 }

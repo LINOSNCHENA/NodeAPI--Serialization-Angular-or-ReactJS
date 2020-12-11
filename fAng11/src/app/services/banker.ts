@@ -1,4 +1,5 @@
 export class Banker {
+
     id!: Number;
     name1!: String;
     dept!: String;

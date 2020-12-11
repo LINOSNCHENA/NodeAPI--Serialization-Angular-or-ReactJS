@@ -5,22 +5,22 @@ class Employee {
         this.salary = salary;
     }
 
-    static getEmployee(id) {                                                       // GetOne  -1
+    static getEmployee(id) {                                                // GetOne  -1
         let sql = `SELECT * FROM bank1 WHERE id = ${id}`;
         return sql;
     }
 
-    static getEmployees() {                                                         //  GetAll  -2
+    static getEmployees() {                                                //  GetAll  -2
         let sql = `SELECT * FROM bank1`;
         return sql;
     }
 
-    static deleteEmployee(id) {                                                      // Delete  -3
+    static deleteEmployee(id) {                                           // Delete  -3
         let sql = `DELETE FROM bank1 WHERE id = ${id}`;
         return sql;
     }
 
-    static addEmployee() {                                                            // PostOne -4
+    static addEmployee() {                                                // PostOne -4
         let sql = `INSERT INTO bank1 (name1, post,dept,salary)         
         VALUES('${this.name1}',${this.post}',${this.dept}',${this.salary}')`;
         return sql;
