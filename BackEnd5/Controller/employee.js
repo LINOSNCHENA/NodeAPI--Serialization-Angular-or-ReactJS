@@ -6,12 +6,13 @@ const router = express.Router();
 
 //  #1  http://localhost:1010/employees/add
 router.post("/employees/", (req, res, next) => {
-    let data = new Employee(req.body.name1, req.body.post,
-        req.body.dept,req.body.salary);//,req.body.status);     
-        console.log(data);
+    let data = new Employee(req.body.name1, req.body.dept,
+        req.body.post,req.body.salary,req.body.published);     
+        console.log(this.data);
+        console.log("data-11");
     db.query(Employee.addEmployee(), (err, data)=> {
         res.status(200).json({ 
-             message:"Worker added.", 
+             message:"Worker POST11 added.", 
              data:data });    
       console.log(data);
     });
@@ -21,7 +22,7 @@ router.post("/employees/", (req, res, next) => {
 router.get("/employees", (req, res, next) => {
     db.query(Employee.getEmployees(), (err, data)=> {
     if(!err) {   res.status(200).json({
-         message:"Employees listed.",
+         message:"Employees 2011 listed.",
          data});
          console.log(data);}
     });    
@@ -34,7 +35,7 @@ router.get("/employees/:employeeId", (req, res, next) => {
         if(!err) {
             if(data && data.length > 0) {
             res.status(200).json({
-            message:"Employee found.", 
+            message:"Employee 2011 found.", 
             data});
             console.log(data);
             } else {

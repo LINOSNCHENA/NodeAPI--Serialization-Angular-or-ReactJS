@@ -1,4 +1,4 @@
-##  Frontend #3, NodeJS, Serialization -and-MySQL
+##  Frontend, NodeJS, Serialization -and-MySQL
 
 The API is processing data query in the engine of the database. The middle-ware constructs statements and then these constructed statements are transported to the database where the database engine execute them. 
 
@@ -6,9 +6,9 @@ The API is processing data query in the engine of the database. The middle-ware 
 
 The developmental stack of the application consist of;
 
-1. FrontEnd  (Angular+9)
+1. FrontEnd  (Angular+9&11)
 2. FrontEnd  (React +4)
-3. Server    (ExpresJS+node)
+3. Server    (ExpresJS+nodejs)
 4. Backend5  (MySQL,*****) Manual table format
 5. Backedn6  (MySQL,MSSQL) Automatic formation
 
@@ -17,7 +17,6 @@ The developmental stack of the application consist of;
 Enter the following commands to execute the application
 
 ```
-npm install
 npm install express sequelize  --save
 npm install mysql2 body-parser cors --save
 npm install bootstrap --save
@@ -29,7 +28,7 @@ npm START
 
 - Open [http://localhost:4200/](http://localhost:4200/employees) in browser to see the frontend one of application.
 - Open [http://localhost:4000/](http://localhost:4200/employees) in browser to see the frontend two of application.
-- Open [http://localhost:8080/](http://localhost:8080/employees) in browser to see the backend of the application.
+- Open [http://localhost:8080/employees](http://localhost:8080/employees) in browser to see the backend of the application.
 
 ## Interface U-Xperience
 

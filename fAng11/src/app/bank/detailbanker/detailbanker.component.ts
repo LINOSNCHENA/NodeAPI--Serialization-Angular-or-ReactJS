@@ -38,7 +38,12 @@ export class DetailbankerComponent implements OnInit {
     const data = {
       name1: this.activeBanker.name1,
       dept: this.activeBanker.dept,
-      published: status
+      post: this.activeBanker.post,
+      salary: this.activeBanker.salary,
+      published: this.activeBanker.published,
+      id: this.activeBanker.id,
+    
+     // published: status
     };
 
     this.bnkService.update(this.activeBanker.id, data)

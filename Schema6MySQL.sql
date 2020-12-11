@@ -7,17 +7,16 @@ CREATE TABLE bank1
     dept VARCHAR(50) NOT NULL,
     post VARCHAR(50)NOT NULL,
     salary int NOT NULL,
-    published boolean DEFAULT "1",
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    published boolean DEFAULT "1"
 );
 
 INSERT INTO bank1
     ( name1, dept, post, salary )
 VALUES
-    ("Mavin1x", "Enginering", "Backend5", 21200 ),
-    ( "Lorena1x", "MySQL-ReactJS", "Administrator", 18500 ),
-    ("Nikolas1x", "Engineering", "Manager", 18500 ),
-    ( "Wendy1x", "MySQL-Angular", "CEO", 32500 ),
+    ("Mav1x", "Enginering", "Backend5", 21200 ),
+    ( "Lorx", "MySQL-ReactJS", "Administrator", 18500 ),
+    ("Nikox", "Engineering", "Manager", 18500 ),
+    ( "Wen", "MySQL-Angular", "CEO", 32500 ),
     ("Louis1x", "Enginering", "Backend5", 21200 );
 
 select*

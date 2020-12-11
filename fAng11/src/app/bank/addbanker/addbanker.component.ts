@@ -14,7 +14,7 @@ export class AddbankerComponent implements OnInit {
     dept: '',
     post: '',
     salary: '',
-    published: false
+    published:false
   };
 
   banker2!: Banker;
@@ -29,7 +29,8 @@ export class AddbankerComponent implements OnInit {
       name1: this.banker.name1,
       dept: this.banker.dept,
       post: this.banker.post,
-      salary: this.banker.salary
+      salary: this.banker.salary,
+      published: this.banker.published,
     };
 
     this.bnkService.create(data)
@@ -50,7 +51,8 @@ export class AddbankerComponent implements OnInit {
       dept: '',
       post: '',
       salary: '',
-      published: false
+      published: this.submitted
     };
+    console.log(this.banker)
   }
 }

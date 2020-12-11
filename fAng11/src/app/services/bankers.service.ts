@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Banker } from './banker';
 
 const baseUrl = 'http://localhost:8080/employees';
 
@@ -18,14 +19,12 @@ export class BankersService {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  create(data: {
-    name1: string; dept: string; post: string;
-    salary: string;
-  }): Observable<any> {
+  create(data: { name1: string; dept: string; post: string;
+     salary: string; published: boolean; }): Observable<any> {
     return this.http.post(baseUrl, data);
   }
 
-  update(id: any, data: { name1: any; dept: any; published: any; }):
+  update(id: any, data: Banker):
     Observable<any> {
       return this.http.put(`${baseUrl}/${id}`, data);
   }

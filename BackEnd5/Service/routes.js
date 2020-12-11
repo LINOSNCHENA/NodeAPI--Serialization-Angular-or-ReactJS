@@ -1,5 +1,5 @@
 class Employee {
-    constructor(name1, post, dept, published, salary) {
+    constructor(name1, post, dept,salary, published) {
         this.name1 = name1; this.post = post;
         this.dept = dept; this.published = published;
         this.salary = salary;
