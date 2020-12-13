@@ -1,6 +1,9 @@
 use presly;
 
 DROP TABLE IF EXISTS bank1;
+DROP TABLE IF EXISTS banker;
+DROP TABLE IF EXISTS books;
+
 CREATE TABLE bank1
 (   id SERIAL PRIMARY KEY,
     name1 VARCHAR(50) NOT NULL,
@@ -15,10 +18,9 @@ VALUES
     ("Mav1x", "Enginering", "Backend5", 21200 ),
     ( "Lorx", "MySQL-ReactJS", "Administrator", 18500 ),
     ("Nikox", "Engineering", "Manager", 18500 ),
-    ( "Wen", "MySQL-Angular", "CEO", 32500 ),
     ("Louis1x", "Enginering", "Backend5", 21200 );
 
-DROP TABLE IF EXISTS banker;
+
 CREATE TABLE banker
 (   id SERIAL PRIMARY KEY,
     name1 VARCHAR(50) NOT NULL,
@@ -32,12 +34,9 @@ INSERT INTO banker ( name1, dept, post, salary )
 VALUES
     ("Mav1x", "Enginering", "Backend5", 21200 ),
     ( "Lorx", "MySQL-ReactJS", "Administrator", 18500 ),
-    ("Nikox", "Engineering", "Banker", 18500 ),
     ( "Banker", "MySQL-Angular", "CEO", 32500 ),
     ("Louis1x", "Enginering", "Backend5", 21200 );
 
-
-DROP TABLE IF EXISTS books;
 CREATE TABLE `books` (  `id` int(11) NOT NULL,
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `author` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
