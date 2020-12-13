@@ -9,25 +9,25 @@
 <div class="container">
   <table class="table table-striped">
     <thead>
-      <th>Id</th>
+      <th>No.</th>
       <th>Name</th>
-      <th>Position</th>
-      <th>dept</th>
-      <th>salary</th>
+      <th>Post</th>
+      <th>Dept</th>
+      <th>Salary</th>
       <th>Status </th>
       <th colspan="2">Actions</th>
     </thead>
     <tbody>
       <tr *ngFor="let worker of bankers">
         <td>{{worker.id}}</td>
-        <td>{{worker.name1}}</td>
+        <td>{{worker.name}}</td>
         <td>{{worker.post}}</td>
         <td>{{worker.dept}}</td>
         <td>{{worker.salary}}</td>
         <td>{{worker.published}}</td>
         <td>
           <button class="btn btn-danger" (click)="editBanker(worker)">Delete</button>
-          <button class="btn btn-danger" (click)="editBanker(worker)">Edit</button>
+          <button class="btn btn-warning" (click)="editBanker(worker)">Edit</button>
         </td>
       </tr>
     </tbody>
@@ -38,13 +38,13 @@
 <br><br>
 
 <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
+<!-- 
 <div class="list row">
   <div class="col-md-8">
     <div class="input-group mb-3">
       <input
         type="text"  class="form-control"
-        placeholder="Search by title"   [(ngModel)]="name1"/>
+        placeholder="Search by title"   [(ngModel)]="name"/>
       <div class="input-group-append">
         <button  class="btn btn-outline-secondary" type="button"
           (click)="searchName()" > Search</button>
@@ -57,7 +57,7 @@
       <li
         class="list-group-item"  *ngFor="let banker of bankers; let i = index"
         [class.active]="i == currentIndex" (click)="setBankerActive(banker, i)" >
-        {{ banker.name1 }}  {{ banker.salary }}
+        {{ banker.name }}  {{ banker.salary }}
       </li>
     </ul>
 
@@ -68,7 +68,7 @@
   <div class="col-md-6">
     <div *ngIf="activeBanker">
       <h4>Active ZANACO Bankers</h4>
-      <div> <label><strong>namel:</strong></label> {{ activeBanker.name1 }} </div>
+      <div> <label><strong>namel:</strong></label> {{ activeBanker.name }} </div>
       <div> <label><strong>deptl:</strong></label>{{ activeBanker.dept }}</div>
       <div> <label><strong>postl:</strong></label> {{ activeBanker.post }} </div>
       <div> <label><strong>salaryl:</strong></label>{{ activeBanker.salary }}</div>
@@ -89,4 +89,4 @@
     </div>
   </div>
 </div>
-  
+   -->

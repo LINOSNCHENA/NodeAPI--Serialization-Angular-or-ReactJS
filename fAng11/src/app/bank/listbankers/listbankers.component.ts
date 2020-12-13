@@ -13,7 +13,7 @@ export class ListbankersComponent implements OnInit {
   bankers?: Banker[];
   activeBanker?: Banker;
   currentIndex = -1;
-  name1 = '';
+  name = '';
 
   constructor(private bnkService: BankersService,
     private _router: Router,) { }
@@ -56,7 +56,7 @@ export class ListbankersComponent implements OnInit {
   }
 
   searchName(): void {
-    this.bnkService.searchByName(this.name1)
+    this.bnkService.searchByName(this.name)
       .subscribe(
         data => {
           this.bankers = data;

@@ -9,7 +9,7 @@ import { BankersService } from 'src/app/services/bankers.service';
 })
 export class AddbankerComponent implements OnInit {
   banker = {
-    name1: '',
+    name: '',
     dept: '',
     post: '',
     salary: '',
@@ -27,7 +27,7 @@ export class AddbankerComponent implements OnInit {
 
   saveBanker(): void {
     const data = {
-      name1: this.banker.name1,
+      name: this.banker.name,
       dept: this.banker.dept,
       post: this.banker.post,
       salary: this.banker.salary,
@@ -48,7 +48,7 @@ export class AddbankerComponent implements OnInit {
   newBanker(): void {
     this.submitted = false;
     this.banker = {
-      name1: '',
+      name: '',
       dept: '',
       post: '',
       salary: '',

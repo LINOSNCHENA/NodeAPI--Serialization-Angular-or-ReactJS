@@ -1,4 +1,4 @@
-##  Frontend, NodeJS, Serialization -and-MySQL
+##  Frontend, nodeJS, serialization, and MySQL
 
 The API is processing data query in the engine of the database. The middle-ware constructs statements and then these constructed statements are transported to the database where the database engine execute them. 
 
@@ -6,9 +6,9 @@ The API is processing data query in the engine of the database. The middle-ware 
 
 The developmental stack of the application consist of;
 
-1. FrontEnd  (Angular+9&11)
+1. FrontEnd  (Angular+9 &11)
 2. FrontEnd  (React +4)
-3. Server    (ExpresJS+nodejs)
+3. Server    (Expresjs+nodejs)
 4. Backend5  (MySQL,*****) Manual table format
 5. Backedn6  (MySQL,MSSQL) Automatic formation
 

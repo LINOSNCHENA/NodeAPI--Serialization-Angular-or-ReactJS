@@ -6,14 +6,14 @@ DROP TABLE IF EXISTS books;
 
 CREATE TABLE bank1
 (   id SERIAL PRIMARY KEY,
-    name1 VARCHAR(50) NOT NULL,
+    name VARCHAR(50) NOT NULL,
     dept VARCHAR(50) NOT NULL,
     post VARCHAR(50)NOT NULL,
     salary int NOT NULL,
     published boolean DEFAULT "1"
 );
 
-INSERT INTO bank1  ( name1, dept, post, salary )
+INSERT INTO bank1  ( name, dept, post, salary )
 VALUES
     ("Mav1x", "Enginering", "Backend5", 21200 ),
     ( "Lorx", "MySQL-ReactJS", "Administrator", 18500 ),
@@ -23,14 +23,14 @@ VALUES
 
 CREATE TABLE banker
 (   id SERIAL PRIMARY KEY,
-    name1 VARCHAR(50) NOT NULL,
+    name VARCHAR(50) NOT NULL,
     dept VARCHAR(50) NOT NULL,
     post VARCHAR(50)NOT NULL,
     salary int NOT NULL,
     published boolean DEFAULT "1"
 );
 
-INSERT INTO banker ( name1, dept, post, salary )
+INSERT INTO banker ( name, dept, post, salary )
 VALUES
     ("Mav1x", "Enginering", "Backend5", 21200 ),
     ( "Lorx", "MySQL-ReactJS", "Administrator", 18500 ),

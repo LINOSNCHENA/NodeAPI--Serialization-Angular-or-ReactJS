@@ -1,6 +1,6 @@
 
 {
-   "name1":"LEON-NIKOLAS",
+   "name":"LEON-NIKOLAS",
    "dept":"INFORMATICS",
    "post":"DEVELOPER",
    "salary":"49550",

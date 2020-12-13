@@ -4,7 +4,7 @@ import ZanacDataService from "../services/ZanacoService";
 const Zanac = props => {
   const initialZanacotate = {
     id: null,
-    name1: "",    dept: "",    post: "",    salary: "",
+    name: "",    dept: "",    post: "",    salary: "",
     published: false
   };
   const [currentZanac, setCurrentZanac] = useState(initialZanacotate);
@@ -33,7 +33,7 @@ const Zanac = props => {
   const updatePublished = status => {
     var data = {
       id: currentZanac.id,
-      name1: currentZanac.name1,
+      name: currentZanac.name,
       dept: currentZanac.dept,
       post: currentZanac.post,
       salary: currentZanac.salary,
@@ -79,13 +79,13 @@ const Zanac = props => {
           <h4> Banker</h4>
           <form>
             <div className="form-group">
-              <label htmlFor="name1">Name</label>
+              <label htmlFor="name">Name</label>
               <input
                 type="text"
                 className="form-control"
-                id="name1"
-                name="name1"
-                value={currentZanac.name1}
+                id="name"
+                name="name"
+                value={currentZanac.name}
                 onChange={handleInputChange}
               />
             </div>

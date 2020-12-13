@@ -14,7 +14,7 @@ export class ListbankersComponent implements OnInit {
   // bankers:  Banker[] = [];
   activeBanker = null;
   currentIndex = -1;
-  name1 = '';
+  name = '';
   bankers1: [string, unknown][];
 
   constructor(private bnkService: BankersService,
@@ -64,7 +64,7 @@ export class ListbankersComponent implements OnInit {
   }
 
   searchName(): void {
-    this.bnkService.searchByName(this.name1)
+    this.bnkService.searchByName(this.name)
       .subscribe(
         data => {
           this.bankers = data;

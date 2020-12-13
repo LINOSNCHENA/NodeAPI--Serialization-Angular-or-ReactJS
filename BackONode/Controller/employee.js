@@ -6,7 +6,7 @@ const router = express.Router();
 
 //  #1  http://localhost:1010/employees/add
 router.post("/employees/", (req, res, next) => {
-    let data = new Employee(req.body.name1, req.body.dept,
+    let data = new Employee(req.body.name, req.body.dept,
         req.body.post,req.body.salary,req.body.published);     
         console.log(this.data);
         console.log("data-11");

@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS bank1;
 CREATE TABLE bank1
 (
    	id INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    name1 VARCHAR(50) NOT NULL,
+    name VARCHAR(50) NOT NULL,
     dept VARCHAR(50) NOT NULL,
     post VARCHAR(50)NOT NULL,
     salary int NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE bank1
 );
 
 INSERT INTO bank1
-    ( name1, dept, post, salary )
+    ( name, dept, post, salary )
 VALUES
     ('Mavin1x', 'Enginering', 'Backend5', 21200 ),
     ( 'Lorena1x', 'Admin', 'Administrator', 18500 ),

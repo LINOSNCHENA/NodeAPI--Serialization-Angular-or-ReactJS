@@ -5,13 +5,13 @@ const Op = db.Sequelize.Op;
 // Create and Save a new Bank
 exports.create = (req, res) => {
   // Validate request
-  if (!req.body.name1) {
+  if (!req.body.name) {
     res.status(400).send({message: "Content can not be empty!" });
     return;
   }
   // Create a Bank
   const bank = {
-    name1: req.body.name1,
+    name: req.body.name,
     dept: req.body.dept,
     post: req.body.post,
     salary: req.body.salary,
@@ -33,8 +33,8 @@ exports.create = (req, res) => {
 
 // Retrieve all Banks from the database.
 exports.findAll = (req, res) => {
-  const name1 = req.query.name1;
-  var condition = name1 ? { name1: { [Op.like]: `%${name1}%` } } : null;
+  const name = req.query.name;
+  var condition = name ? { name: { [Op.like]: `%${name}%` } } : null;
 
   Bank.findAll({ where: condition })
     .then(data => { res.send(data); })

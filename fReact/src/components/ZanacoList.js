@@ -68,7 +68,7 @@ const ZanacoList = () => {
           <input
             type="text"
             className="form-control"
-            placeholder="Search by name1"
+            placeholder="Search by name"
             value={searchName}
             onChange={onChangesearchName}
           />
@@ -96,7 +96,7 @@ const ZanacoList = () => {
                 onClick={() => setActiveZanac(Zanac, index)}
                 key={index}
               >
-                {Zanac.name1}  {'! - !'}     {Zanac.dept}  {'! - !'}     {Zanac.post}
+                {Zanac.name}  {'! - !'}     {Zanac.dept}  {'! - !'}     {Zanac.post}
               </li>
             ))}
         </ul>
@@ -113,7 +113,7 @@ const ZanacoList = () => {
           <div>
             <h4>List of Bankers</h4>
             <div> <label> <strong>Name:</strong>
-              </label>{" "} {currentZanac.name1} </div>
+              </label>{" "} {currentZanac.name} </div>
             <div> <label> <strong>Department:</strong>
               </label>{" "}{currentZanac.dept} </div>
 

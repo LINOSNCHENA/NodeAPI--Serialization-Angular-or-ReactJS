@@ -17,12 +17,12 @@ export class BankersService {
     return this.http.get(`${baseUrl}/${id}`);
   }
 
-  create(data: { name1: string; dept: string; post: string; 
+  create(data: { name: string; dept: string; post: string; 
     salary: string; }): Observable<any> {
     return this.http.post(baseUrl, data);
   }
 
-  update(id: any, data: { name1: any; dept: any; published: any; }): 
+  update(id: any, data: { name: any; dept: any; published: any; }): 
   Observable<any> { return this.http.put(`${baseUrl}/${id}`, data);
   }
 
@@ -34,8 +34,8 @@ export class BankersService {
     return this.http.delete(baseUrl);
   }
 
-  searchByName(name1: string): Observable<any> {
-    return this.http.get(`${baseUrl}?name1=${name1}`);
+  searchByName(name: string): Observable<any> {
+    return this.http.get(`${baseUrl}?name=${name}`);
   }
 
 }

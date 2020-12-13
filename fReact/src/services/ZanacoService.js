@@ -24,8 +24,8 @@ const removeAll = () => {
   return http.delete(`/employees`);
 };
 
-const seachByName = name1 => {
-  return http.get(`/employees?name1=${name1}`);
+const seachByName = name => {
+  return http.get(`/employees?name=${name}`);
 };
 
 export default { getAll, get, create, update, remove, removeAll, seachByName };

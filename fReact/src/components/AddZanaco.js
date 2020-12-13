@@ -3,7 +3,7 @@ import ZanacDataService from "../services/ZanacoService";
 
 const AddZanac = () => {
   const initialZanacotate = {
-    id: null,    name1: "",    dept: "",
+    id: null,    name: "",    dept: "",
     post: "", salary: "",
     published: false
   };
@@ -18,7 +18,7 @@ const AddZanac = () => {
 
   const saveZanac = () => {
     var data = {
-      name1: Zanac.name1,
+      name: Zanac.name,
       dept: Zanac.dept,
       post: Zanac.post,
       salary: Zanac.salary
@@ -28,7 +28,7 @@ const AddZanac = () => {
       .then(response => {
         setZanac({
           id: response.data.id,
-          name1: response.data.name1,
+          name: response.data.name,
           dept: response.data.dept,
           post: response.data.post,
           salary: response.data.salary,
@@ -58,10 +58,10 @@ const AddZanac = () => {
         </div>
       ) : (
           <div>
-            <div className="form-group"> <label htmlFor="name1">Name1</label>
-              <input type="text" className="form-control" id="name1"
-                required value={Zanac.name1}
-                onChange={handleInputChange} name="name1" />
+            <div className="form-group"> <label htmlFor="name">name</label>
+              <input type="text" className="form-control" id="name"
+                required value={Zanac.name}
+                onChange={handleInputChange} name="name" />
             </div>
 
             <div className="form-group"><label htmlFor="dept">Dept</label>       

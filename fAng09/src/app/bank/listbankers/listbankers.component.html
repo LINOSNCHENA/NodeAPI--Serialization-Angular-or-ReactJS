@@ -22,7 +22,7 @@
     <tbody>
       <tr *ngFor="let worker of bankers">
         <td>{{worker.id}}</td>
-        <td>{{worker.name1}}</td>
+        <td>{{worker.name}}</td>
         <td>{{worker.post}}</td>
         <td>{{worker.dept}}</td>
         <td>{{worker.salary}}</td>
@@ -46,7 +46,7 @@
     <div class="input-group mb-3">
       <input
         type="text"  class="form-control"
-        placeholder="Search by title"   [(ngModel)]="name1"/>
+        placeholder="Search by title"   [(ngModel)]="name"/>
       <div class="input-group-append">
         <button  class="btn btn-outline-secondary" type="button"
           (click)="searchName()" > Search</button>
@@ -59,7 +59,7 @@
       <li
         class="list-group-item"  *ngFor="let banker of bankers; let i = index"
         [class.active]="i == currentIndex" (click)="setBankerActive(banker, i)" >
-        {{ banker.name1 }}  {{ banker.salary }}
+        {{ banker.name }}  {{ banker.salary }}
       </li>
     </ul>
 
@@ -70,7 +70,7 @@
   <div class="col-md-6">
     <div *ngIf="activeBanker">
       <h4>Active ZANACO Bankers</h4>
-      <div> <label><strong>namel:</strong></label> {{ activeBanker.name1 }} </div>
+      <div> <label><strong>namel:</strong></label> {{ activeBanker.name }} </div>
       <div> <label><strong>deptl:</strong></label>{{ activeBanker.dept }}</div>
       <div> <label><strong>postl:</strong></label> {{ activeBanker.post }} </div>
       <div> <label><strong>salaryl:</strong></label>{{ activeBanker.salary }}</div>

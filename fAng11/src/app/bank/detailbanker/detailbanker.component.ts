@@ -36,7 +36,7 @@ export class DetailbankerComponent implements OnInit {
 
   updatePublished(status: any): void {
     const data = {
-      name1: this.activeBanker.name1,
+      name: this.activeBanker.name,
       dept: this.activeBanker.dept,
       post: this.activeBanker.post,
       salary: this.activeBanker.salary,
