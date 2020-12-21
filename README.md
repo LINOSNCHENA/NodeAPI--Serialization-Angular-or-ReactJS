@@ -17,8 +17,9 @@ The developmental stack of the application consist of;
 Enter the following commands to execute the application
 
 ```
+describe users;
 npm install express sequelize  --save
-npm install mysql2 body-parser cors --save
+npm install mysql2 cors --save
 npm install bootstrap --save
 npm START
 
@@ -40,3 +41,5 @@ npm START
 ![Mut#4 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/master/uxViews/page4.png)
 ![Mut#5 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/master/uxViews/page5.png)
 ![Mut#6 ](https://github.com/LINOSNCHENA/NodeAPI--Serialization-Angular-or-ReactJS/blob/master/uxViews/page6.png)
+
+## END

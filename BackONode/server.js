@@ -1,6 +1,5 @@
 var express = require('express');
 var bodyparser = require('body-parser');
-var cors = require('cors');
 var rusanguLtD = require('./Controller/employee');
 var http = require("http");
 
@@ -8,16 +7,10 @@ var http = require("http");
 const port = process.env.port || 8080;
 const app = express();
 const server = http.createServer(app);
-app.use(cors());
+const cors = require("cors");
+const allowlist = ['http://localhost:4200', 'http://localhost:54938'];
+app.use(cors(allowlist));
 
-
-app.use(function (req, res, next) {              //  SECURITY LUMUMBA
-   res.setHeader('Access-Control-Allow-Origin', '*');
-   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-   res.setHeader('Access-Control-Allow-Credentials', true);
-   next();
- });
  app.use(bodyparser.json());
  app.use(bodyparser.urlencoded({ extended: false }));
  app.use("/", rusanguLtD);
