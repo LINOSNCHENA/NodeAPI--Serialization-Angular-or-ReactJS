@@ -18,11 +18,13 @@ Enter the following commands to execute the application
 
 ```
 describe users;
-npm install express sequelize  --save
-npm install mysql2 cors --save
-npm install bootstrap --save
-npm START
+ng serve --port 4200 --o
+ng serve --port 4400 --o
 
+update NPM 
+npm uninstall --save-dev angular-cli
+npm install --save-dev @angular/cli@latest
+npm install
 ```
 
 ## Links for the frontend endpoints and backend endpoints
