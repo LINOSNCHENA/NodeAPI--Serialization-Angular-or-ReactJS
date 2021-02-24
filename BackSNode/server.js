@@ -3,14 +3,6 @@ const bodyParser = require("body-parser");
 var cors = require('cors');
 const app = express();
 
-// app.use(function (req, res, next) {              //  SECURITY LUMUMBA
-//   res.setHeader('Access-Control-Allow-Origin', '*');
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-//   res.setHeader('Access-Control-Allow-Credentials', true);
-//   next();
-// });
-
 // parse requests of content-type - application/json
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
