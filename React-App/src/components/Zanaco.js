@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ZanacDataService from "../services/ZanacoService";
+import dataServices from "../services/accountService";
 
 const Zanac = props => {
   const initialZanacotate = {
@@ -11,7 +11,7 @@ const Zanac = props => {
   const [message, setMessage] = useState("");
 
   const getZanac = id => {
-    ZanacDataService.get(id)
+    dataServices.get(id)
       .then(response => {
         setCurrentZanac(response.data);
         console.log(response.data);
@@ -40,7 +40,7 @@ const Zanac = props => {
       published: status
     };
 
-    ZanacDataService.update(currentZanac.id, data)
+    dataServices.update(currentZanac.id, data)
       .then(response => {
         setCurrentZanac({ ...currentZanac, published: status });
         console.log(response.data);
@@ -51,7 +51,7 @@ const Zanac = props => {
   };
 
   const updateZanac = () => {
-    ZanacDataService.update(currentZanac.id, currentZanac)
+    dataServices.update(currentZanac.id, currentZanac)
       .then(response => {
         console.log(response.data);
         setMessage("The Zanac was updated successfully!");
@@ -62,7 +62,7 @@ const Zanac = props => {
   };
 
   const deleteZanac = () => {
-    ZanacDataService.remove(currentZanac.id)
+    dataServices.remove(currentZanac.id)
       .then(response => {
         console.log(response.data);
         props.history.push("/employees"); 
@@ -108,7 +108,7 @@ const Zanac = props => {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="dept">Salary</label>
+              <label htmlFor="dept">DepositTwo</label>
               <input
                 type="text"                className="form-control"
                 id="salary"                name="salary"

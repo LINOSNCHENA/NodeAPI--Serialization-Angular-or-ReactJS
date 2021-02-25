@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ZanacDataService from "../services/ZanacoService";
+import dataServices from "../services/accountService";
 import { Link } from "react-router-dom";
 
 const ZanacoList = () => {
@@ -8,6 +8,7 @@ const ZanacoList = () => {
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [searchName, setsearchName] = useState("");
 
+  
   useEffect(() => {
     retrieveZanaco();
   }, []);
@@ -18,7 +19,7 @@ const ZanacoList = () => {
   };
 
   const retrieveZanaco = () => {
-    ZanacDataService.getAll()
+    dataServices.getAll()
       .then(response => {
         setZanaco(response.data);
         console.log(response.data);
@@ -40,7 +41,7 @@ const ZanacoList = () => {
   };
 
   const removeAllZanaco = () => {
-    ZanacDataService.removeAll()
+    dataServices.removeAll()
       .then(response => {
         console.log(response.data);
         refreshList();
@@ -51,7 +52,7 @@ const ZanacoList = () => {
   };
 /////////////////////////////////////////////////////////////////////
   const seachByName = () => {
-    ZanacDataService.seachByName(searchName)
+    dataServices.seachByName(searchName)
       .then(response => {
         setZanaco(response.data);
         console.log(response.data);

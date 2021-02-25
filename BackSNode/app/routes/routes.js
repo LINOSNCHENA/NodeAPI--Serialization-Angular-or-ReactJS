@@ -24,6 +24,6 @@ module.exports = app => {
     // Delete all Bankers present
     router.delete("/", banked.deleteAll);
   
-    app.use('/employees', router);
+    app.use('/accounts', router);
   };
   

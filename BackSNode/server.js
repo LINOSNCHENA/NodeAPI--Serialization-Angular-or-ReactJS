@@ -1,18 +1,27 @@
 const express = require("express");
 const bodyParser = require("body-parser");
-var cors = require('cors');
+var cors = require("cors");
 const app = express();
 
-// parse requests of content-type - application/json
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 const db = require("./app/models");
 // db.sequelize.sync();
- // drop the table if it already exists
- db.sequelize.sync({ force: true }).then(() => {console.log("Drop and re-sync db.");});
- var blacklist = ['http://localhost:4200','http://localhost:4600','http://example2.com','http://localhost:4800','http://localhost:8081']
- const corsOption = {
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and re-sync db.");
+});
+var blacklist = [
+  "http://localhost:4200",
+  "http://localhost:4400",
+  "http://localhost:4600",
+  "http://localhost:4800",
+  // Angular-ReactJS
+  "http://localhost:8081",
+  "http://localhost:8082",
+  "http://localhost:8083",
+];
+const corsOption = {
   origin: blacklist,
 };
 
@@ -20,7 +29,7 @@ app.use(cors(corsOption));
 
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to Mexico application." });
 });
 
 require("./app/routes/routes")(app);

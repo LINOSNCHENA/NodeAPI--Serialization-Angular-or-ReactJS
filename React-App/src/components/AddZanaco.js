@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ZanacDataService from "../services/ZanacoService";
+import dataServices from "../services/accountService";
 
 const AddZanac = () => {
   const initialZanacotate = {
@@ -24,7 +24,7 @@ const AddZanac = () => {
       salary: Zanac.salary
     };
 
-    ZanacDataService.create(data)
+    dataServices.create(data)
       .then(response => {
         setZanac({
           id: response.data.id,
@@ -58,7 +58,7 @@ const AddZanac = () => {
         </div>
       ) : (
           <div>
-            <div className="form-group"> <label htmlFor="name">name</label>
+            <div className="form-group"> <label htmlFor="name">Fullname</label>
               <input type="text" className="form-control" id="name"
                 required value={Zanac.name}
                 onChange={handleInputChange} name="name" />
@@ -75,7 +75,7 @@ const AddZanac = () => {
             </div>
 
 
-            <div className="form-group"><label htmlFor="salary">salary</label>
+            <div className="form-group"><label htmlFor="salary">Deposit</label>
             <input type="text" className="form-control" id="salary" required
                 value={Zanac.salary} onChange={handleInputChange} name="salary" />
             </div>
