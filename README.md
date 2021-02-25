@@ -35,9 +35,9 @@ npm start
 - Open [http://localhost:8081/](http://localhost:8081/accounts) in browser to see the frontend two of application.
 - Open [http://localhost:8080/accounts](http://localhost:8080/accounts) in browser to see the backend of the application.
 
-## Interface U-Xperience
+## User Interface
 
-Below are some screens shots from the application console
+Below are some screens shots(10) from the application console
 
 ![Mut#1 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page1.png)
 ![Mut#2 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page2.png)
@@ -48,7 +48,7 @@ Below are some screens shots from the application console
 ![Mut#7 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page7.png)
 ![Mut#8 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page8.png)
 ![Mut#9 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page9.png)
-![Mu#10 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page11.png)
+![Mu#10 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page10.png)
 
 ## Versioning - LECTURER: 8
 
