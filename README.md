@@ -6,11 +6,11 @@ The API is processing data query to a backend MySQL database. The operations are
 
 The developmental stack of the application consist of;
 
-1. FrontEnd (Angular+9 &11)
-2. FrontEnd (React +4)
+1. FrontEnd (Angular+9 & +11)
+2. FrontEnd (React +17)
 3. Server (Expresjs+nodejs)
-4. Backedn6 (MySQL,MSSQL) Automatic formation
-5. Backend5 (MssqlL,**\***) Manual table format
+4. Backend (MySQL,MSSQL) Automatic formation
+5. Backend (MssqlL,**\***) Manual table format
 
 ## Execution commands
 
@@ -32,7 +32,7 @@ npm start
 ## Links for the frontend endpoints and backend endpoints
 
 - Open [http://localhost:4600/](http://localhost:4600/accounts) in browser to see the frontend one of application.
-- Open [http://localhost:8010/](http://localhost:8010/accounts) in browser to see the frontend two of application.
+- Open [http://localhost:8081/](http://localhost:8081/accounts) in browser to see the frontend two of application.
 - Open [http://localhost:8080/accounts](http://localhost:8080/accounts) in browser to see the backend of the application.
 
 ## Interface U-Xperience
@@ -47,10 +47,10 @@ Below are some screens shots from the application console
 ![Mut#6 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page6.png)
 ![Mut#7 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page7.png)
 ![Mut#8 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page8.png)
-![Mut#9 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page2.png)
-![Mu#10 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page1.png)
+![Mut#9 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page9.png)
+![Mu#10 ](https://github.com/LINOSNCHENA/NodeJS-with-db-serial-in-Angular-or-Reactjs/blob/master/uxViews/page11.png)
 
-## Version LECTURER: 8
+## Versioning - LECTURER: 8
 
 ```
 npm list react
